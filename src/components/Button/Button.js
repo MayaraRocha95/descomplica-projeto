@@ -4,7 +4,7 @@ import Spinner from 'react-bootstrap/Spinner';
 export const Button = ({ loading, variant, disabled, label, loadingLabel, 
 onClick }) => {
   return(
-    <ButtonBS variant={variant} disabled={disabled} onclick={onClick}>
+    <ButtonBS  type="button" variant={variant} disabled={disabled} onClick={onClick}>
     {loading && (
   <>
      <Spinner

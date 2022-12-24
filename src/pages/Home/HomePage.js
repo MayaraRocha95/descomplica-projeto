@@ -1,38 +1,14 @@
  import { Card } from '../../components/Card/Card';
- import { ModalCard } from '../../components/Modal/Modal';
  import Row from 'react-bootstrap/Row';
  import Container from 'react-bootstrap/Container';
  import Col from 'react-bootstrap/Col';
+ import { ModalSavePin } from '../../containers/ModalSavePin/ModalSavePin';
 
 
 export const HomePage = () => {
   return(
     <div >
-      <ModalCard  
-      open={true} 
-      title="Salvar Pin"
-      controls={[
-        {
-          label: 'Criar pasta',
-          variant: 'primary',
-          OnClick: () => {
-            console.log('Clicou!!!!!!!')
-          }
-          
-        },
-        {
-          label: 'Fechar',
-          variant: 'secondary',
-          OnClick: () => {
-            console.log('Clicou!!!!!!!')
-          }
-          
-        }
-
-      ]}
-      >
-        <p>Curtiu os gatos ao ar livre?</p>
-      </ModalCard>
+     <ModalSavePin open={true} />
     <Container fluid>
       <Row>
         <Col xs={10} md={3}> <Card title="Gata ao ar livre"

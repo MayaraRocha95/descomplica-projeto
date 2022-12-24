@@ -1,31 +1,31 @@
 import { Button } from '../Button/Button';
-import Modal from 'react-bootstrap/Modal';
+import ModalBS from 'react-bootstrap/Modal';
 
 
-export const ModalCard = ({ title, children, open, controls = []  }) => {
+export const Modal = ({ title, children, open, controls = []  }) => {
   return (
-    <Modal show={open} onHide={() => {}}>
-    <Modal.Header closeButton>
-      <Modal.Title>{title}</Modal.Title>
-    </Modal.Header>
-    <Modal.Footer>
-    <Modal.Body>{children}</Modal.Body>
+    <ModalBS show={open} onHide={() => {}}>
+    <ModalBS.Header closeButton>
+      <ModalBS.Title>{title}</ModalBS.Title>
+    </ModalBS.Header>
+    <ModalBS.Footer>
+    <ModalBS.Body>{children}</ModalBS.Body>
     {controls.map((control, controlIndex) => (
       <Button
        key={controlIndex}
        variant={control.variant}
        onClick={control.onClick}
-       label="Salvar"
-       loadingLabel="Salvando"
-       loading={true}
-        disable={true}
+       label={control.label}
+       loadingLabel={control.loadingLabel}
+       loading={control.loading}
+       disabled={control.disabled}
         />
        
     
     ))}
       
       
-    </Modal.Footer>
-  </Modal>
+    </ModalBS.Footer>
+  </ModalBS>
   );
 }
